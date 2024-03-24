@@ -31,7 +31,7 @@ export default function Services() {
                 />
                 <ServiceUi
                     title="my digital tool box."
-                    description="These are my go to tech stack to make any projects happen. I am always eager of learning more about my current stack, and new technologies that could expand my horizons."
+                    description="These are my go to tech stack to make any projects happen. I am always keen and enthusiastic to trial new about my current stack, and new technologies that could expand my horizons."
                     items={toolBoxItems}
                 />
             </div>

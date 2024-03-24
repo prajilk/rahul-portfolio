@@ -58,7 +58,7 @@ export default function NavBar({ sectionRefs }) {
         >
             {/* logo */}
             <a href="#hero" aria-label="Logo" className="z-50">
-                <h1 className="my-2 text-2xl font-bold">Rahul.R</h1>
+                <h1 className="my-2 text-2xl font-bold">Rahul</h1>
             </a>
             <nav className=" space-x-7 font-grotesk text-body-3 sm:block">
                 <a

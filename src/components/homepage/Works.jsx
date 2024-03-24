@@ -1,8 +1,8 @@
-import travelAgency from "/src/assets/images/Group 78.png";
-import sneaker from "/src/assets/images/img.png";
-import interior from "/src/assets/images/img (4).png";
-import furniture from "/src/assets/images/img (2).png";
-import healthcare from "/src/assets/images/img (3).png";
+import travelAgency from "/src/assets/images/travel-agency.png";
+import sneaker from "/src/assets/images/sneaker-store.png";
+import interior from "/src/assets/images/interior.png";
+import furniture from "/src/assets/images/furniture-ui.png";
+import healthcare from "/src/assets/images/health-care.png";
 import Projects from "../ui/Projects";
 import Heading from "../ui/Heading";
 
