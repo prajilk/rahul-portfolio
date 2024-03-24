@@ -63,7 +63,7 @@ export default function Works({ forwardedRef }) {
                 </div>
                 <div className="col-span-1 h-fit md:col-span-4">
                     <Projects
-                        link="https://sunnysidechallenge.netlify.app"
+                        link="https://www.behance.net/gallery/190638607/Landing-Page-HealthCare-Website-Luhar-Care"
                         img={healthcare}
                         alt="Healthcare website mockup"
                         name="Healthcare LANDING PAGE"
