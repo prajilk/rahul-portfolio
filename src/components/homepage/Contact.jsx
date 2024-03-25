@@ -3,9 +3,16 @@ import { useEffect, useState, useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
 import Heading from "../ui/Heading";
+import { toast } from "sonner";
 
 export default function Contact() {
     const [time, setTime] = useState(new Date().toLocaleTimeString());
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    const [loading, setLoading] = useState(false);
 
     const heading = useRef(null);
     const body = useRef(null);
@@ -41,6 +48,42 @@ export default function Contact() {
         }, 1000);
     });
 
+    async function handleSubmit(e) {
+        setLoading(true);
+        e.preventDefault();
+
+        if (name === "" || email === "" || message === "") {
+            setLoading(false);
+            return toast.error("Please fill all the fields");
+        }
+
+        try {
+            await fetch(
+                `https://api-formease.vercel.app/form?api_key=${
+                    import.meta.env.VITE_FORM_API
+                }&form_id=58fcb457358c`,
+                // 332f232ff44b
+                {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        message,
+                    }),
+                }
+            );
+            toast.success("Message sent successfully.");
+            setName("");
+            setEmail("");
+            setMessage("");
+        } catch {
+            toast.error("Unable sent message!");
+        } finally {
+            setLoading(false);
+        }
+    }
+
     return (
         <section
             id="contact"
@@ -63,7 +106,7 @@ export default function Contact() {
                         ref={body}
                         className="mt-4 max-w-md translate-y-10 text-body-2 text-accent-100 opacity-0 2xl:max-w-2xl 2xl:text-4xl"
                     >
-                        I am currently not available for freelance work. I am
+                        I am currently available for freelance work. I am
                         accepting new projects starting from{" "}
                         {new Intl.DateTimeFormat("en-US", {
                             month: "long",
@@ -72,11 +115,10 @@ export default function Contact() {
                     </p>
                     <form
                         name="contact"
-                        action="/contact"
+                        onSubmit={handleSubmit}
                         autoComplete="off"
                         // eslint-disable-next-line react/no-unknown-property
                         className="mt-10 font-grotesk"
-                        method="POST"
                     >
                         <input type="hidden" name="form-name" value="contact" />
                         <div className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2">
@@ -88,6 +130,8 @@ export default function Contact() {
                                     name="name"
                                     className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                                     placeholder=" "
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
                                 />
                                 <label
                                     htmlFor="name"
@@ -99,11 +143,13 @@ export default function Contact() {
                             <div className="relative z-0">
                                 <input
                                     required
-                                    type="text"
+                                    type="email"
                                     name="email"
                                     id="email"
                                     className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                                     placeholder=" "
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
                                 />
                                 <label
                                     htmlFor="email"
@@ -120,6 +166,8 @@ export default function Contact() {
                                     rows="5"
                                     className="peer block w-full appearance-none border-0 border-b border-accent-100 bg-transparent px-0 py-2.5 focus:outline-none focus:ring-0"
                                     placeholder=" "
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
                                 ></textarea>
                                 <label
                                     htmlFor="message"
@@ -131,13 +179,25 @@ export default function Contact() {
                         </div>
                         <button
                             type="submit"
-                            className="button group mt-10 border duration-200 hover:border-accent-400 hover:bg-transparent"
+                            disabled={loading}
+                            className={`button group mt-10 border duration-200 disabled:bg-accent-100 ${
+                                !loading &&
+                                "hover:border-accent-400 hover:bg-transparent"
+                            }`}
                         >
                             <span className="relative">
-                                <span className="absolute bottom-2 h-1 w-0 bg-secondary-700 opacity-90 duration-300 ease-out group-hover:w-full"></span>
-                                <span className="group-hover:text-accent-400">
-                                    Send Message
-                                </span>
+                                <span
+                                    className={`absolute bottom-2 h-1 w-0 bg-secondary-700 opacity-90 duration-300 ease-out ${
+                                        !loading && "group-hover:w-full"
+                                    }`}
+                                ></span>
+                                {loading ? (
+                                    "Sending..."
+                                ) : (
+                                    <span className="group-hover:text-accent-400">
+                                        Send message
+                                    </span>
+                                )}
                             </span>
                         </button>
                     </form>
