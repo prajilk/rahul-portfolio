@@ -61,8 +61,7 @@ export default function Contact() {
             await fetch(
                 `https://api-formease.vercel.app/form?api_key=${
                     import.meta.env.VITE_FORM_API
-                }&form_id=58fcb457358c`,
-                // 332f232ff44b
+                }&form_id=332f232ff44b`,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
