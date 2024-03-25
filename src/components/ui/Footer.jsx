@@ -10,7 +10,7 @@ export default function Footer() {
                     <span>&copy;</span>
                     <span>{new Date().getFullYear()}</span>
                     <span className="font-extrabold uppercase 2xl:text-body-1">
-                        Rahul R
+                        Rahul Rajeev
                     </span>
                 </div>
                 <div>
