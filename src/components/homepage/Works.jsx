@@ -73,6 +73,17 @@ export default function Works({ forwardedRef }) {
                     />
                 </div>
             </div>
+            <div className="flex justify-center py-5">
+                <a
+                    href="https://www.behance.net/rahulrajeev22"
+                    className="group relative w-fit cursor-pointer text-lg"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    <span className="text-primary-200">View More</span>
+                    <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+                </a>
+            </div>
         </section>
     );
 }
