@@ -6,8 +6,8 @@ import "./index.css";
 import posthog from "posthog-js";
 import { PostHogProvider } from "posthog-js/react";
 
-posthog.init("phc_KgQcYKUgHzj4DKqpMaATdTjQikhlAucZl4ek4fUTJDy", {
-    api_host: "https://app.posthog.com",
+posthog.init(import.meta.env.VITE_POSTHOG_API, {
+    api_host: import.meta.env.VITE_POSTHOG_HOST,
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
