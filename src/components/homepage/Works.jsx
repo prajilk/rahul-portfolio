@@ -3,6 +3,7 @@ import spaceExplore from "/src/assets/images/space-explore.png";
 import gym from "/src/assets/images/gym.png";
 import sneaker from "/src/assets/images/sneaker-store.png";
 import travelAgency from "/src/assets/images/travel-agency.png";
+import waah from "/src/assets/images/waah.webp";
 
 import Projects from "../ui/Projects";
 import Heading from "../ui/Heading";
@@ -15,9 +16,21 @@ export default function Works({ forwardedRef }) {
             className="nav-change my-[10%] overflow-hidden"
         >
             <Heading title="Projects" />
-            <div className="mt-10 grid grid-cols-1 gap-16 gap-y-10 md:grid-cols-12">
+            <div className="grid grid-cols-1 gap-y-10 gap-16 mt-10 md:grid-cols-12">
                 {/* Project #1 */}
-                <div className=" col-span-1 md:col-span-12">
+                <div className="col-span-1  md:col-span-12">
+                    <Projects
+                        link="https://www.behance.net/gallery/237297569/Aryu-Technologies-UIUX-Design"
+                        img={waah}
+                        alt="Aryu Tech mockup"
+                        name="Aryu Technologies UIUX Design"
+                        type="UI/UX Design • Web Design • Branding"
+                        year="2025"
+                        tools="Photoshop • Figma"
+                    />
+                </div>
+                {/* Project #2 */}
+                <div className="col-span-1 pt-0 md:col-span-7 md:pt-16">
                     <Projects
                         link="https://www.behance.net/gallery/195195853/Cybersecurity-Website-Landing-Page"
                         img={cyberSecurity}
@@ -28,8 +41,7 @@ export default function Works({ forwardedRef }) {
                         tools="Photoshop • Figma"
                     />
                 </div>
-                {/* Project #2 */}
-                <div className="col-span-1 pt-0 md:col-span-7 md:pt-16">
+                <div className="col-span-1 pt-0 md:col-span-5 md:pt-80">
                     <Projects
                         link="https://www.behance.net/gallery/195322237/Luhar-Space-Space-Exploration-Website"
                         img={spaceExplore}
@@ -40,7 +52,7 @@ export default function Works({ forwardedRef }) {
                         tools="Figma • Photoshop"
                     />
                 </div>
-                <div className="col-span-1 pt-0 md:col-span-5 md:pt-80">
+                <div className="col-span-1 pt-0 h-fit md:col-span-8 md:pt-20">
                     <Projects
                         link="https://www.behance.net/gallery/195247963/Fitness-Gym-Website-I-Landing-Page-Luhar-Fitness"
                         img={gym}
@@ -51,7 +63,7 @@ export default function Works({ forwardedRef }) {
                         tools="Photoshop • Figma"
                     />
                 </div>
-                <div className="col-span-1 h-fit pt-0 md:col-span-8 md:pt-20">
+                <div className="col-span-1 h-fit md:col-span-4">
                     <Projects
                         link="https://www.behance.net/gallery/188471007/Ecommerce-Shopping-App-Sneaker-Store-Case-Study"
                         img={sneaker}
@@ -62,22 +74,11 @@ export default function Works({ forwardedRef }) {
                         tools="Figma • Photoshop"
                     />
                 </div>
-                <div className="col-span-1 h-fit md:col-span-4">
-                    <Projects
-                        link="https://www.behance.net/gallery/190463171/Travel-Agency-Website-Luhar-Landing-Page"
-                        img={travelAgency}
-                        alt="Travel agency website mockup"
-                        name="Travel Agency Website"
-                        type="UI/UX Design • Web Design"
-                        year="2024"
-                        tools="Adobe XD • Figma"
-                    />
-                </div>
             </div>
             <div className="flex justify-center py-5">
                 <a
                     href="https://www.behance.net/rahulrajeev22"
-                    className="group relative w-fit cursor-pointer text-lg"
+                    className="relative text-lg cursor-pointer group w-fit"
                     target="_blank"
                     rel="noreferrer"
                 >
