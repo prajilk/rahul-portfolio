@@ -58,24 +58,35 @@ export default function About() {
                         </h3>
                         <p
                             ref={body}
-                            className="opacity-0 translate-y-10  text-body-1 2xl:text-4xl"
+                            className="opacity-0 translate-y-10 text-body-1 2xl:text-4xl"
                         >
-                            I am an independent UI/UX designer and creator based
-                            in Chennai, India.
+                            I&apos;m Rahul, a UI/UX Designer who enjoys turning
+                            ideas into meaningful digital experiences. I
+                            don&apos;t look at design as just visuals, I look at
+                            it as a mix of psychology, clarity and intention.
+                            Every interface should guide people naturally
+                            without them even realizing it.
                             <br></br>
-                            <br></br>I specialize in crafting elevated,
-                            intuitive, and minimalistic designs for startups and
-                            small businesses to help them stand out in the
-                            digital landscape with a powerful impact. 😎
+                            <br></br>Over the past few years, I&apos;ve worked
+                            on websites, products and platforms across different
+                            industries, helping businesses improve their digital
+                            presence and create experiences people genuinely
+                            value. I focus on designing interfaces that feel
+                            clean, modern and effortless while solving real user
+                            problems in a practical way. 😎
                             <br></br>
                             <br></br>
-                            As a UI/UX designer, I specialize in utilizing tools
-                            such as Figma, Adobe XD, Adobe Photoshop, and
-                            Illustration to transform ideas into visually
-                            stunning and user-friendly designs. My expertise
-                            lies in conceptualizing, prototyping, and refining
-                            designs to deliver seamless experiences across
-                            various platforms.
+                            My approach is straightforward. Understand the
+                            intention, simplify the complexity and design an
+                            experience that feels natural. Every decision from a
+                            layout to a micro interaction should help someone do
+                            what they came to do without unnecessary friction.
+                            <br></br>
+                            <br></br>
+                            Design, for me, is the idea of making digital
+                            experiences clearer, more intuitive and
+                            fundamentally more human. That purpose continues to
+                            shape how I think and work every day.
                         </p>
                     </div>
                 </div>

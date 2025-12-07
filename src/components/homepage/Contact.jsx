@@ -120,25 +120,28 @@ export default function Contact() {
             <Heading title="Contact" />
             <div
                 ref={contactSection}
-                className="mt-10 flex flex-col gap-20 md:grid md:grid-cols-6 md:px-12"
+                className="flex flex-col gap-20 mt-10 md:grid md:grid-cols-6 md:px-12"
             >
                 <div className="col-span-4">
                     <h3
                         ref={heading}
-                        className="max-w-lg translate-y-10 text-heading-3 font-semibold leading-tight opacity-0 2xl:max-w-3xl 2xl:text-7xl"
+                        className="max-w-lg font-semibold leading-tight opacity-0 translate-y-10 text-heading-3 2xl:max-w-3xl 2xl:text-7xl"
                     >
                         Have an awesome idea? Let&apos;s bring it to life.
                     </h3>
                     <p
                         ref={body}
-                        className="mt-4 max-w-md translate-y-10 text-body-2 text-accent-100 opacity-0 2xl:max-w-2xl 2xl:text-4xl"
+                        className="mt-4 max-w-md opacity-0 translate-y-10 text-body-2 text-accent-100 2xl:max-w-2xl 2xl:text-4xl"
                     >
-                        I am currently available for freelance work. I am
+                        {/* I am currently available for freelance work. I am
                         accepting new projects starting from{" "}
                         {new Intl.DateTimeFormat("en-US", {
                             month: "long",
                         }).format(new Date())}{" "}
-                        {new Date().getFullYear()}.
+                        {new Date().getFullYear()}. */}
+                        If you're looking for a designer to improve your digital
+                        product or brand presence, let's connect and discuss how
+                        I can help.
                     </p>
                     <form
                         name="contact"
@@ -229,15 +232,15 @@ export default function Contact() {
                         </button>
                     </form>
                 </div>
-                <div className="col-span-2 grid grid-cols-1 gap-x-4 gap-y-8 text-accent-300 sm:grid-cols-2 sm:gap-y-0 md:grid-cols-1">
-                    <div className="space-y-3 ">
-                        <h4 className="text-body-1 font-semibold 2xl:text-4xl">
+                <div className="grid grid-cols-1 col-span-2 gap-x-4 gap-y-8 text-accent-300 sm:grid-cols-2 sm:gap-y-0 md:grid-cols-1">
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-body-1 2xl:text-4xl">
                             Contact Details
                         </h4>
                         <div className="flex flex-col space-y-3 text-body-2 2xl:text-3xl">
                             <a
                                 href="mailto:rahul.rajeev2212@gmail.com"
-                                className="group relative w-fit cursor-pointer"
+                                className="relative cursor-pointer group w-fit"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -246,14 +249,14 @@ export default function Contact() {
                             </a>
                         </div>
                     </div>
-                    <div className="space-y-3 ">
-                        <h4 className="text-body-1 font-semibold 2xl:text-4xl">
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-body-1 2xl:text-4xl">
                             My Digital Spaces
                         </h4>
                         <div className="space-y-3 text-body-2 2xl:text-3xl">
                             <a
                                 href="https://www.behance.net/rahulrajeev22"
-                                className="group flex items-center space-x-2"
+                                className="flex items-center space-x-2 group"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -268,7 +271,7 @@ export default function Contact() {
                             </a>
                             <a
                                 href="https://dribbble.com/rahulrajeev01"
-                                className="group flex items-center space-x-2"
+                                className="flex items-center space-x-2 group"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -283,7 +286,7 @@ export default function Contact() {
                             </a>
                             {/* <a
                                 href="https://github.com/huyngxyz"
-                                className="group flex items-center space-x-2"
+                                className="flex items-center space-x-2 group"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -295,7 +298,7 @@ export default function Contact() {
                             </a> */}
                             <a
                                 href="https://www.linkedin.com/in/rahulrajeev01/"
-                                className="group group flex w-fit items-center space-x-2"
+                                className="flex items-center space-x-2 group w-fit"
                                 target="_blank"
                                 rel="noreferrer"
                             >
@@ -307,8 +310,8 @@ export default function Contact() {
                             </a>
                         </div>
                     </div>
-                    <div className="space-y-3 ">
-                        <h4 className="text-body-1 font-semibold 2xl:text-4xl">
+                    <div className="space-y-3">
+                        <h4 className="font-semibold text-body-1 2xl:text-4xl">
                             Location
                         </h4>
                         <div className="space-y-2 text-body-2 2xl:text-3xl">
