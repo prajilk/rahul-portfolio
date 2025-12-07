@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import profileImg from "/src/assets/images/profile.jpeg";
+import profileImg from "/src/assets/images/profile.jpg";
 import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
 import Heading from "../ui/Heading";
@@ -36,12 +36,12 @@ export default function About() {
         // Try using max width to contain the size of the container
         <section ref={aboutSection} aria-label="about me">
             <Heading title="about me" />
-            <div className="mt-10 flex flex-col items-start gap-8 md:flex-row lg:gap-10 ">
-                <div className="top-28 overflow-hidden rounded-md md:sticky md:w-1/2">
+            <div className="flex flex-col gap-8 items-start mt-10 md:flex-row lg:gap-10">
+                <div className="overflow-hidden top-28 rounded-md md:sticky md:w-1/2">
                     <img
                         ref={profile}
                         loading="lazy"
-                        className="aspect-square h-auto w-full rounded-md object-cover object-center md:aspect-auto"
+                        className="object-cover object-center w-full h-auto rounded-md aspect-square md:aspect-auto"
                         src={profileImg}
                         width="600"
                         height="800"
@@ -49,16 +49,16 @@ export default function About() {
                     />
                 </div>
                 <div className="top-20 sm:sticky md:top-28 md:w-1/2 lg:top-32">
-                    <div className="w-full space-y-4 2xl:space-y-10">
+                    <div className="space-y-4 w-full 2xl:space-y-10">
                         <h3
                             ref={heading}
-                            className="translate-y-10 text-heading-3 font-semibold leading-tight opacity-0 2xl:text-7xl"
+                            className="font-semibold leading-tight opacity-0 translate-y-10 text-heading-3 2xl:text-7xl"
                         >
                             A brief intro, who am I?
                         </h3>
                         <p
                             ref={body}
-                            className=" translate-y-10 text-body-1 opacity-0 2xl:text-4xl"
+                            className="opacity-0 translate-y-10  text-body-1 2xl:text-4xl"
                         >
                             I am an independent UI/UX designer and creator based
                             in Chennai, India.
